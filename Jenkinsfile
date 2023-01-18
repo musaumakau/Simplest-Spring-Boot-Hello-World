@@ -11,8 +11,15 @@ pipeline {
            sh 'mvn test'
       }
     }
-    stage('Maven Build') {
+    stage('Maven build') {
       steps {
            sh 'mvn package'
       }
     }
+     stage('Maven deploy') {
+      steps {
+           echo 'deploying to the server'
+      }
+    }
+  }
+}
