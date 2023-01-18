@@ -8,12 +8,12 @@ pipeline {
     }
     stage('Maven build') {
       steps {
-           sh 'mvn package '
+           sh 'mvn package'
       }
     }
     stage('Create Dockerimage') {
       steps {
-           sh 'sudo docker build -t demo/springboot:latest . '
+           sh 'sudo docker build -t demo/springboot:latest .'
       }
     }
   }
